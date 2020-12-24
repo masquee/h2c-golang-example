@@ -4,11 +4,12 @@ import (
 	"context"
 	"crypto/tls"
 	"fmt"
-	"golang.org/x/net/http2"
 	"net"
 	"net/http"
 	"os"
 	"time"
+
+	"golang.org/x/net/http2"
 )
 
 func checkErr(err error, msg string) {
@@ -42,7 +43,7 @@ func RoundTripExample() {
 
 	req.WithContext(ctx)
 	resp, err := tr.RoundTrip(req)
-	checkErr(err, "during roundtrip")
+	checkErr(err, "during round trip")
 
 	fmt.Printf("RoundTrip Proto: %d\n", resp.ProtoMajor)
 }
