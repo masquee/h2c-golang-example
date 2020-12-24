@@ -25,7 +25,7 @@ func main() {
 	//RoundTripExample()
 }
 
-const url = "http://localhost:9030/_groupcache/"
+const url = "http://localhost:1010/"
 
 func RoundTripExample() {
 	req, err := http.NewRequest("GET", url, nil)
@@ -60,6 +60,5 @@ func HttpClientExample() {
 
 	resp, err := client.Get(url)
 	checkErr(err, "during get")
-
 	fmt.Printf("Client Proto: %d\n", resp.ProtoMajor)
 }
